@@ -10,13 +10,13 @@ const mongoose = require('mongoose')
 
 const app = express()
 
-connectDB()
-
 app.use(cors())
 
 app.get('/', (req, res) => {
   res.send('APP IS RUNNING')
 })
+
+connectDB()
 
 app.use(
   '/graphql',
